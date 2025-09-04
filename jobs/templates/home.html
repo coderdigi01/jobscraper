@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+        <h1 class="mt-5">Welcome to Job Scraper</h1>
+        <p class="lead">Scrape job listings and update Google Sheets seamlessly.</p>
+        </div>
+         <a href="{% url 'run_scraper' %}" class="btn btn-primary mb-3">🔄 Run Job Scraper</a>
+    </div>
+
+    <div class="row">
+        <table class="table table-striped mt-4">
+            <thead>
+                <tr>
+                    <th>Job Title</th>
+                    <th>Company</th>
+                    <th>Location</th>
+                    <th>Date Posted</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for job in jobs %}
+                <tr>
+                    <td>{{ job.title }}</td>
+                    <td>{{ job.company }}</td>
+                    <td>{{ job.location }}</td>
+                    <td>{{ job.date_posted }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4">No jobs available.</td>
+                </tr>
+                {% endfor %}
+        </table>
+    </div>
+</div>
+
+{% endblock %}

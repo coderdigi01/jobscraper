@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+
+# Django
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media/
+staticfiles/
+static_root/
+local_settings.py
+
+# Scraping related (cache, screenshots, drivers)
+*.png
+*.jpg
+*.jpeg
+*.gif
+chromedriver
+geckodriver.log
+error.png
+
+# Environment Variables
+.env
+*.secret
+*.json  # (Google API creds, keep them out of git!)
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.sws
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Jupyter / Notebooks
+.ipynb_checkpoints
+
+# Coverage / Testing
+.coverage
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+htmlcov/
+
+# Compiled
+*.so
+*.pyd
+*.dll
+
+# Packaging
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+MANIFEST
