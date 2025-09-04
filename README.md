@@ -5,6 +5,9 @@ It can also update job listings to **Google Sheets** automatically.
 
 ---
 
+## Create google api 
+**Get api from google sheet  **
+
 ## 🚀 Features
 - Scrape jobs from [TimesJobs](https://www.timesjobs.com).
 - Extracts:
@@ -25,7 +28,7 @@ It can also update job listings to **Google Sheets** automatically.
 
 ## 🛠️ Tech Stack
 - **Python 3.10+**
-- **Django 4.x**
+- **Django 5.x**
 - **BeautifulSoup4**
 - **Requests**
 - **gspread** (Google Sheets API)
