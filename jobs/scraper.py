@@ -61,17 +61,17 @@ def scrape_jobs():
 
     container = soup.find("ul", class_="new-joblist")
     if not container:
-        print("⚠️ No job list found!")
+        print("No job list found!")
         return []
 
     cards = container.find_all("li", class_="clearfix job-bx wht-shd-bx")
-    print(f"⚡ Found {len(cards)} jobs")
+    print(f"Found {len(cards)} jobs")
 
     jobs = []
     for card in cards:
         job_data = parse_job_card(card)
 
-        # ✅ Save if not exists
+        # Save if not exists
         if not Job.objects.filter(link=job_data["link"]).exists():
             Job.objects.create(
                 title=job_data["title"],
